@@ -14,7 +14,7 @@ Follow the tutorial on website: [__Simplified IOS__](https://www.simplifiedios.n
 ### **Tasks**:
 1. Signing up for Facebook Auth
 2. Use Azure Mobile Apps SDK for IOS
-### <font color=#D2691E>__Homework3 due date:__</font>
+### __Homework3 due date:__
 1. Develop a basic Running Diary app
 2. Worth 10 marks
 3. Due in the lab of Week 11
