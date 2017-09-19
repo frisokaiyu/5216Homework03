@@ -34,11 +34,19 @@ Follow the tutorial on website: [Simplified IOS](https://www.simplifiedios.net/f
 - Handling errors.
 - Customizing the client.
 - This guide focuses on the client-side Android SDK. To learn more about the server-side SDKs for Mobile Apps, see Work with .NET backend SDK or How to use the Node.js backend SDK.
-- [ ](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-dotnet-backend-how-to-use-server-sdk)
-- [ ](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-node-backend-how-to-use-server-sdk)
+- [](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-dotnet-backend-how-to-use-server-sdk)
+- [](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-node-backend-how-to-use-server-sdk)
 - Please follow the link below to finish this task:
-- [ ](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-ios-how-to-use-client-library)
+- [](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-ios-how-to-use-client-library)
 
+### _Homework3 [10 marks, due in the lab Week 11]_
+- In this homework, you need to design a Running Diary app. Main features may include:
+1. Pace calculator / time tracking
+2. Running GPS with Maps & running routes
+3. Run log: run history tracking with monthly averages 4. Music player access
+- Marking Scheme:
+1. (4marks)UI: including 2 marks Visual Design and 2 marks for Usability
+2. (6marks)Functionalities
 
 
 
