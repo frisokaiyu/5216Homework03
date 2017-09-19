@@ -26,18 +26,15 @@ Follow the tutorial on website: [Simplified IOS](https://www.simplifiedios.net/f
 1. Before we even begin to integrate Facebook authentication into our app, we must register a new application on the Facebook Developer site. [](https://developers.facebook.com/)
 2. Next, we’ll want to add a proper _oAuth_ redirect, which can be done by adding a “Facebook Login” product:<br /> ![](1.png)
 - For this application, we’ll be using Azure App Service, which means we can specify a redirect URL such as:[Azure App Service](https://[AppServiceApplicationURL]/.auth/login/facebook/callback) ![](2.png)
-3. You can learn more about configuring this by reading through the Azure App Service Authentication with Facebook documentation.[](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to- configure-facebook-authentication)
+3. You can learn more about configuring this by reading through the Azure App Service Authentication with Facebook documentation.[](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication)
 ### Task 2: Use Azure Mobile Apps SDK for IOS
 - This guide shows you how to use the Android client SDK for Mobile Apps to implement common scenarios, such as:
 - Querying for data (inserting, updating, and deleting).
 - Authentication.
 - Handling errors.
 - Customizing the client.
-- This guide focuses on the client-side Android SDK. To learn more about the server-side SDKs for Mobile Apps, see Work with .NET backend SDK or How to use the Node.js backend SDK.
-- [](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-dotnet-backend-how-to-use-server-sdk)
-- [](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-node-backend-how-to-use-server-sdk)
-- Please follow the link below to finish this task:
-- [](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-ios-how-to-use-client-library)
+- This guide focuses on the client-side Android SDK. To learn more about the server-side SDKs for Mobile Apps, see Work with .NET backend SDK or How to use the Node.js backend SDK.[](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-dotnet-backend-how-to-use-server-sdk)[](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-node-backend-how-to-use-server-sdk)
+- Please follow the link below to finish this task:[](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-ios-how-to-use-client-library)
 
 ### _Homework3 [10 marks, due in the lab Week 11]_
 - In this homework, you need to design a Running Diary app. Main features may include:
