@@ -58,8 +58,8 @@ class CreateWorkoutTableViewController: UITableViewController {
   
   private lazy var durationFormatter: DateComponentsFormatter = {
     let formatter = DateComponentsFormatter()
-    formatter.unitsStyle = .positional
-    formatter.allowedUnits = [.minute, .second]
+    formatter.unitsStyle = .full
+    formatter.allowedUnits = [.minute, .second, .nanosecond]
     formatter.zeroFormattingBehavior = [.pad]
     return formatter
   }()
@@ -110,11 +110,11 @@ class CreateWorkoutTableViewController: UITableViewController {
     switch session.state {
       
     case .active:
-      buttonTitle = "STOP PRANCERCISING"
+      buttonTitle = "STOP"
       buttonColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
       
     case .notStarted, .finished:
-      buttonTitle = "START PRANCERCISING!"
+      buttonTitle = "START"
       buttonColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
       
     }
@@ -166,24 +166,39 @@ class CreateWorkoutTableViewController: UITableViewController {
   @IBAction func cancelButtonPressed(sender: Any) {
     dismiss(animated: true, completion: nil)
   }
-  
-  @IBAction func doneButtonPressed(sender: Any) {
-  
-    guard let currentWorkout = session.completeWorkout else {
-      fatalError("Shouldn't be able to press the done button without a saved workout.")
+    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
+        guard let currentWorkout = session.completeWorkout else {
+            fatalError("Shouldn't be able to press the done button without a saved workout.")
+        }
+        
+        WorkoutDataStore.save(prancerciseWorkout: currentWorkout) { (success, error) in
+            
+            if success {
+                self.dismissAndRefreshWorkouts()
+            } else {
+                self.displayProblemSavingWorkoutAlert()
+            }
+            
+        }
     }
     
-    WorkoutDataStore.save(prancerciseWorkout: currentWorkout) { (success, error) in
-      
-      if success {
-        self.dismissAndRefreshWorkouts()
-      } else {
-        self.displayProblemSavingWorkoutAlert()
-      }
-      
-    }
-  
-  }
+//  @IBAction func doneButtonPressed(sender: Any) {
+//  
+//    guard let currentWorkout = session.completeWorkout else {
+//      fatalError("Shouldn't be able to press the done button without a saved workout.")
+//    }
+//    
+//    WorkoutDataStore.save(prancerciseWorkout: currentWorkout) { (success, error) in
+//      
+//      if success {
+//        self.dismissAndRefreshWorkouts()
+//      } else {
+//        self.displayProblemSavingWorkoutAlert()
+//      }
+//      
+//    }
+//  
+//  }
 
   private func dismissAndRefreshWorkouts() {
     session.clear()
@@ -193,7 +208,7 @@ class CreateWorkoutTableViewController: UITableViewController {
   private func displayStartPrancerciseAlert() {
     
     let alert = UIAlertController(title: nil,
-                                  message: "Start a Prancercise session? (Get those ankle weights ready)",
+                                  message: "Start a Timer?",
                                   preferredStyle: .alert)
     
     let yesAction = UIAlertAction(title: "Yes",

@@ -21,6 +21,7 @@
 		94E0C8D51F92831A001E583C /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E0C8D41F92831A001E583C /* ProfileDataStore.swift */; };
 		94E0C8D71F928322001E583C /* WorkoutDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E0C8D61F928322001E583C /* WorkoutDataStore.swift */; };
 		94E0C9071F92883B001E583C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E0C9061F92883B001E583C /* HealthKit.framework */; };
+		94F24FF61F948E4C00434B34 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F24FF51F948E4C00434B34 /* MapViewController.swift */; };
 		DE3ED32E1E39DD33007601CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3ED32D1E39DD33007601CB /* AppDelegate.swift */; };
 		DE3ED3301E39DD33007601CB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3ED32F1E39DD33007601CB /* FirstViewController.swift */; };
 		DE3ED3321E39DD33007601CB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3ED3311E39DD33007601CB /* SecondViewController.swift */; };
@@ -54,6 +55,7 @@
 		94E0C8D91F928343001E583C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../../Prancercise Tracker添加 musicplayer/Prancercise Tracker/Info.plist"; sourceTree = "<group>"; };
 		94E0C9061F92883B001E583C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		94E0C9081F92883C001E583C /* MusicPlay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MusicPlay.entitlements; sourceTree = "<group>"; };
+		94F24FF51F948E4C00434B34 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DE3ED32A1E39DD33007601CB /* MusicPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3ED32D1E39DD33007601CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE3ED32F1E39DD33007601CB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				DE3ED3311E39DD33007601CB /* SecondViewController.swift */,
 				94E0C8BE1F9282BA001E583C /* CreateWorkoutTableViewController.swift */,
 				94E0C8C41F9282D5001E583C /* WorkoutsTableViewController.swift */,
+				94F24FF51F948E4C00434B34 /* MapViewController.swift */,
 				94E0C8C01F9282C8001E583C /* MasterViewController.swift */,
 				94E0C8C61F9282E1001E583C /* HistoryViewController.swift */,
 				94CB05B41F928D92001B3EDF /* HistoricalPedometerViewController.swift */,
@@ -254,6 +257,7 @@
 				94E0C8C51F9282D5001E583C /* WorkoutsTableViewController.swift in Sources */,
 				94E0C8D11F92830B001E583C /* Activity.swift in Sources */,
 				94E0C8C71F9282E2001E583C /* HistoryViewController.swift in Sources */,
+				94F24FF61F948E4C00434B34 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

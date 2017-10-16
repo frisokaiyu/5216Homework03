@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rS3-R9-Ivy">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Menlo.ttc">
+            <string>Menlo-Bold</string>
+            <string>Menlo-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Demo List Nav-->
+        <scene sceneID="cUi-kZ-frf">
+            <objects>
+                <navigationController title="Demo List Nav" id="rS3-R9-Ivy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yXu-0R-QUA">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pGg-6v-bdr" kind="relationship" relationship="rootViewController" id="RxB-wf-QIq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eq9-QA-ai8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-148" y="64"/>
+        </scene>
+        <!--Motion Activity View Controller-->
+        <scene sceneID="Yka-G7-OOa">
+            <objects>
+                <viewController id="QZn-se-fHQ" customClass="MotionActivityViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nY2-uB-NgQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ID8-7M-3EW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4UG-be-NDx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Rt-iV-MIC">
+                                <rect key="frame" x="16" y="88" width="568" height="61"/>
+                                <string key="text">CMMotionActivityManager will try to determine the current type of motion of the person using this device, along with a confidence value. DO NOT USE THIS FEATURE WHILE OPERATING A MOTOR VEHICLE.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confidence" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZY-R9-DdH">
+                                <rect key="frame" x="0.0" y="250" width="320" height="20"/>
+                                <color key="backgroundColor" red="0.073770128190517426" green="0.56230473518371582" blue="0.11330326646566391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Results" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cN1-vC-xYI">
+                                <rect key="frame" x="16" y="249" width="568" height="24"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cN1-vC-xYI" firstAttribute="leading" secondItem="4UG-be-NDx" secondAttribute="leadingMargin" id="4ux-sR-IPV"/>
+                            <constraint firstItem="8Rt-iV-MIC" firstAttribute="top" secondItem="nY2-uB-NgQ" secondAttribute="bottom" constant="24" id="6Uo-Fj-Z8d"/>
+                            <constraint firstAttribute="trailing" secondItem="CZY-R9-DdH" secondAttribute="trailing" id="8b5-8D-hXK"/>
+                            <constraint firstItem="CZY-R9-DdH" firstAttribute="top" secondItem="8Rt-iV-MIC" secondAttribute="bottom" constant="40" id="FDm-xn-7OH"/>
+                            <constraint firstItem="cN1-vC-xYI" firstAttribute="top" secondItem="CZY-R9-DdH" secondAttribute="bottom" constant="40" id="LcI-hG-mv6"/>
+                            <constraint firstItem="8Rt-iV-MIC" firstAttribute="leading" secondItem="4UG-be-NDx" secondAttribute="leadingMargin" id="OJs-al-Wgf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cN1-vC-xYI" secondAttribute="trailing" id="Tw8-bX-iaq"/>
+                            <constraint firstItem="CZY-R9-DdH" firstAttribute="leading" secondItem="4UG-be-NDx" secondAttribute="leading" id="YmK-1D-LNf"/>
+                            <constraint firstItem="8Rt-iV-MIC" firstAttribute="trailing" secondItem="4UG-be-NDx" secondAttribute="trailingMargin" id="boS-uj-vC2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="confidenceLabel" destination="CZY-R9-DdH" id="6uA-gh-oWw"/>
+                        <outlet property="explainerLabel" destination="8Rt-iV-MIC" id="R33-9O-70b"/>
+                        <outlet property="resultsLabel" destination="cN1-vC-xYI" id="saM-rd-1Xa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AOn-8t-4Ai" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="605" y="-771"/>
+        </scene>
+        <!--Demo List-->
+        <scene sceneID="VgW-fR-Quf">
+            <objects>
+                <tableViewController title="Demo List" id="pGg-6v-bdr" customClass="DemoListViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="mLL-gJ-YKr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Motion Activity" id="tbW-5L-hh6">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="2pz-XF-uhl" style="IBUITableViewCellStyleDefault" id="m0d-ak-lc9">
+                                        <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0d-ak-lc9" id="d3P-M7-ByW">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Real-time Motion Activity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2pz-XF-uhl">
+                                                    <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="QZn-se-fHQ" kind="show" identifier="PushToActivityTypeSegue" id="yoj-YY-ygF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Pedometer Data" id="kqa-p8-J32">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="tgY-bT-BIE" style="IBUITableViewCellStyleDefault" id="OIx-nu-cq1">
+                                        <rect key="frame" x="0.0" y="147.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OIx-nu-cq1" id="ixn-zN-Ous">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Real-time Pedometer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tgY-bT-BIE">
+                                                    <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="siV-jc-maZ" kind="show" identifier="PushToRealTimePedometerSegue" id="SAi-FI-EAV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="j3e-xQ-x0K" style="IBUITableViewCellStyleDefault" id="jHu-Hk-jNx">
+                                        <rect key="frame" x="0.0" y="191.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jHu-Hk-jNx" id="wBJ-Sv-FI3">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Querying Pedometer History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j3e-xQ-x0K">
+                                                    <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Eda-C7-2OW" kind="show" identifier="PushToHistoricalPedometerSegue" id="8qK-9Z-4p4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Altitude &amp; Floors" id="cE3-Ue-YM5">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="jum-j9-vuy" style="IBUITableViewCellStyleDefault" id="0m4-Vs-nPb">
+                                        <rect key="frame" x="0.0" y="283.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0m4-Vs-nPb" id="MBh-d3-noG">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="CMAltitude Deltas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jum-j9-vuy">
+                                                    <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="qvX-77-TCE" kind="show" identifier="PushToAltimeterSegue" id="6fF-lW-uqt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="14E-8u-o27" style="IBUITableViewCellStyleDefault" id="RwI-kD-qRt">
+                                        <rect key="frame" x="0.0" y="327.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RwI-kD-qRt" id="Pcf-qb-LXt">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="CLFloor Detector" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="14E-8u-o27">
+                                                    <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Ah7-4n-0Wa" kind="show" identifier="PushToFloorSegue" id="EB8-a7-hCI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="pGg-6v-bdr" id="P41-gY-KXY"/>
+                            <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Demos" id="tQt-TN-PWz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="604" y="63"/>
+        </scene>
+        <!--Real Time Pedometer View Controller-->
+        <scene sceneID="IRI-uk-2uF">
+            <objects>
+                <viewController id="siV-jc-maZ" customClass="RealTimePedometerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RDu-yA-zmz"/>
+                        <viewControllerLayoutGuide type="bottom" id="I0Q-PA-dpC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8nX-Op-unZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Waiting for data..." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="De3-gg-Iks">
+                                <rect key="frame" x="16" y="249" width="568" height="24"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeZ-Km-meg">
+                                <rect key="frame" x="16" y="80" width="568" height="61"/>
+                                <string key="text">Fetches data from CMPedometer in real-time. By default, it will count steps (etc.) from the moment it's pushed, but it can also provide a cumulative total from a start date prior to the push.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="di4-RI-gLh">
+                                <rect key="frame" x="16" y="181" width="568" height="29"/>
+                                <segments>
+                                    <segment title="Now"/>
+                                    <segment title="6 Hours Ago"/>
+                                    <segment title="12 Hours Ago"/>
+                                </segments>
+                                <connections>
+                                    <action selector="handleStartTimeSelected:" destination="siV-jc-maZ" eventType="valueChanged" id="yxq-m5-ONj"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNF-Ji-5t7">
+                                <rect key="frame" x="240" y="550" width="132" height="30"/>
+                                <state key="normal" title="Show Current Logs">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="HEi-LB-CdZ" kind="show" identifier="PushToPedometerLogSegue" id="h8J-R1-GJv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="I0Q-PA-dpC" firstAttribute="top" secondItem="zNF-Ji-5t7" secondAttribute="bottom" constant="20" id="4bs-7D-KZr"/>
+                            <constraint firstItem="De3-gg-Iks" firstAttribute="top" secondItem="di4-RI-gLh" secondAttribute="bottom" constant="40" id="Do8-Hj-6FP"/>
+                            <constraint firstItem="di4-RI-gLh" firstAttribute="trailing" secondItem="8nX-Op-unZ" secondAttribute="trailingMargin" id="FIL-Eg-XlI"/>
+                            <constraint firstItem="di4-RI-gLh" firstAttribute="leading" secondItem="8nX-Op-unZ" secondAttribute="leadingMargin" id="H5v-ey-V4p"/>
+                            <constraint firstItem="eeZ-Km-meg" firstAttribute="top" secondItem="RDu-yA-zmz" secondAttribute="bottom" constant="16" id="JdF-q2-MZ8"/>
+                            <constraint firstItem="De3-gg-Iks" firstAttribute="leading" secondItem="8nX-Op-unZ" secondAttribute="leadingMargin" id="MYe-Vo-Ut0"/>
+                            <constraint firstItem="eeZ-Km-meg" firstAttribute="trailing" secondItem="8nX-Op-unZ" secondAttribute="trailingMargin" id="SxT-EB-xm3"/>
+                            <constraint firstItem="De3-gg-Iks" firstAttribute="trailing" secondItem="8nX-Op-unZ" secondAttribute="trailingMargin" id="Znl-MX-PsS"/>
+                            <constraint firstItem="eeZ-Km-meg" firstAttribute="leading" secondItem="8nX-Op-unZ" secondAttribute="leadingMargin" id="jbh-4y-GMV"/>
+                            <constraint firstAttribute="centerX" secondItem="zNF-Ji-5t7" secondAttribute="centerX" constant="-6" id="kam-eq-gW7"/>
+                            <constraint firstItem="di4-RI-gLh" firstAttribute="top" secondItem="eeZ-Km-meg" secondAttribute="bottom" constant="40" id="wHf-b5-4JR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultsLabel" destination="De3-gg-Iks" id="My2-t0-BLM"/>
+                        <outlet property="showLogsButton" destination="zNF-Ji-5t7" id="PrV-p7-UXt"/>
+                        <outlet property="startSegmentedControl" destination="di4-RI-gLh" id="60L-qn-Otx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWd-QE-ko1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1307" y="-509"/>
+        </scene>
+        <!--Pedometer Log View Controller-->
+        <scene sceneID="nJG-WF-cNe">
+            <objects>
+                <viewController id="HEi-LB-CdZ" customClass="PedometerLogViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v5d-zc-w7f"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xi5-rt-Wd2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZEd-dz-Pcq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fci-Db-Qxc">
+                                <rect key="frame" x="16" y="0.0" width="568" height="600"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fci-Db-Qxc" firstAttribute="leading" secondItem="ZEd-dz-Pcq" secondAttribute="leadingMargin" id="170-BY-yHq"/>
+                            <constraint firstItem="Xi5-rt-Wd2" firstAttribute="top" secondItem="fci-Db-Qxc" secondAttribute="bottom" id="BT0-sw-Uv8"/>
+                            <constraint firstItem="fci-Db-Qxc" firstAttribute="top" secondItem="ZEd-dz-Pcq" secondAttribute="topMargin" id="Q1l-8S-hAT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fci-Db-Qxc" secondAttribute="trailing" id="o97-gt-woI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logTextView" destination="fci-Db-Qxc" id="Ovj-ub-xNI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BC3-7m-17C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985" y="-509"/>
+        </scene>
+        <!--Historical Pedometer View Controller-->
+        <scene sceneID="HJQ-zV-fY9">
+            <objects>
+                <viewController id="Eda-C7-2OW" customClass="HistoricalPedometerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0xF-36-TJD"/>
+                        <viewControllerLayoutGuide type="bottom" id="a3S-Gu-dXr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2wa-Ce-54X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CMPedometer can also provide historical data for any arbitrary time range in the last seven days." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfw-Gr-Rl2">
+                                <rect key="frame" x="16" y="92" width="568" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oBr-fN-g75">
+                                <rect key="frame" x="151" y="173" width="299" height="29"/>
+                                <segments>
+                                    <segment title="Last 12 Hours"/>
+                                    <segment title="Last 3 Days"/>
+                                    <segment title="This Week"/>
+                                </segments>
+                                <connections>
+                                    <action selector="timeRangeSelected:" destination="Eda-C7-2OW" eventType="valueChanged" id="GoY-vg-W6A"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Results" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C40-bs-8CU">
+                                <rect key="frame" x="16" y="241" width="568" height="33"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="oBr-fN-g75" secondAttribute="centerX" id="4H5-7U-Lky"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C40-bs-8CU" secondAttribute="trailing" id="By7-Iu-7y0"/>
+                            <constraint firstItem="cfw-Gr-Rl2" firstAttribute="leading" secondItem="2wa-Ce-54X" secondAttribute="leadingMargin" id="HBA-Oc-7ll"/>
+                            <constraint firstItem="C40-bs-8CU" firstAttribute="top" secondItem="oBr-fN-g75" secondAttribute="bottom" constant="40" id="JgA-Na-lF2"/>
+                            <constraint firstItem="oBr-fN-g75" firstAttribute="top" secondItem="cfw-Gr-Rl2" secondAttribute="bottom" constant="40" id="PEd-Pb-Rkv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cfw-Gr-Rl2" secondAttribute="trailing" id="Pcy-6J-aKp"/>
+                            <constraint firstItem="C40-bs-8CU" firstAttribute="leading" secondItem="2wa-Ce-54X" secondAttribute="leadingMargin" id="WAj-cK-bSs"/>
+                            <constraint firstItem="cfw-Gr-Rl2" firstAttribute="top" secondItem="0xF-36-TJD" secondAttribute="bottom" constant="28" id="agk-aa-rsF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="explainerLabel" destination="cfw-Gr-Rl2" id="gMR-Xp-Z12"/>
+                        <outlet property="resultsLabel" destination="C40-bs-8CU" id="8Tk-J5-kLe"/>
+                        <outlet property="timeRangeSegmentedControl" destination="oBr-fN-g75" id="00f-xR-Qqe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sSy-AT-8TI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1307" y="179"/>
+        </scene>
+        <!--Altimeter View Controller-->
+        <scene sceneID="Yy2-vc-lVY">
+            <objects>
+                <viewController id="qvX-77-TCE" customClass="AltimeterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XLp-EQ-wfY"/>
+                        <viewControllerLayoutGuide type="bottom" id="1hZ-yf-HQ3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lfk-aH-vb5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CMAltimeter tracks changes in altitude and pressure, relative to each time it is restarted." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiU-Ko-QJZ">
+                                <rect key="frame" x="16" y="104" width="568" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Starting..." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMN-ca-gnp">
+                                <rect key="frame" x="16" y="473" width="568" height="47"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BMN-ca-gnp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qiU-Ko-QJZ" secondAttribute="bottom" constant="40" id="DvC-0L-le9"/>
+                            <constraint firstItem="qiU-Ko-QJZ" firstAttribute="top" secondItem="XLp-EQ-wfY" secondAttribute="bottom" constant="40" id="NAj-Bq-tmS"/>
+                            <constraint firstItem="BMN-ca-gnp" firstAttribute="leading" secondItem="Lfk-aH-vb5" secondAttribute="leadingMargin" id="g9A-0U-ZXx"/>
+                            <constraint firstItem="1hZ-yf-HQ3" firstAttribute="top" secondItem="BMN-ca-gnp" secondAttribute="bottom" constant="80" id="rQ7-Oo-6Ry"/>
+                            <constraint firstItem="qiU-Ko-QJZ" firstAttribute="leading" secondItem="Lfk-aH-vb5" secondAttribute="leadingMargin" id="uuM-1C-Lbu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qiU-Ko-QJZ" secondAttribute="trailing" id="vG1-Qj-8bE"/>
+                            <constraint firstItem="BMN-ca-gnp" firstAttribute="trailing" secondItem="Lfk-aH-vb5" secondAttribute="trailingMargin" id="xdf-4v-Bzu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="explainerLabel" destination="qiU-Ko-QJZ" id="h0F-l5-P0D"/>
+                        <outlet property="resultsLabel" destination="BMN-ca-gnp" id="eWG-Xu-sCo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E8D-9h-GpJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1307" y="980"/>
+        </scene>
+        <!--Floor Detector-->
+        <scene sceneID="Cn3-H9-jdl">
+            <objects>
+                <viewController title="Floor Detector" id="Ah7-4n-0Wa" customClass="FloorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cIm-e0-J51"/>
+                        <viewControllerLayoutGuide type="bottom" id="a0L-h9-sNL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MMQ-IT-qOo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiQ-Fr-6Xm">
+                                <rect key="frame" x="16" y="72" width="568" height="415"/>
+                                <string key="text">CLFloor is actually part of the CoreLocation framework, not CoreMotion. I added this as a bonus, because I wanted a way to test availability on the go. Location updates will start as soon as you give permission. For more information, check the readme of this project. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Is there a floor?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="x06-2g-PtE">
+                                <rect key="frame" x="16" y="527" width="568" height="33"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="MiQ-Fr-6Xm" secondAttribute="trailing" id="45l-S4-Avz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x06-2g-PtE" secondAttribute="trailing" id="DhV-Xm-aNd"/>
+                            <constraint firstItem="MiQ-Fr-6Xm" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" id="HGQ-lR-s1q"/>
+                            <constraint firstItem="MiQ-Fr-6Xm" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" constant="8" id="LuK-kD-AHD"/>
+                            <constraint firstItem="x06-2g-PtE" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" id="UYA-Jq-9mb"/>
+                            <constraint firstItem="x06-2g-PtE" firstAttribute="top" secondItem="MiQ-Fr-6Xm" secondAttribute="bottom" constant="40" id="Xqw-jb-IBk"/>
+                            <constraint firstItem="a0L-h9-sNL" firstAttribute="top" secondItem="x06-2g-PtE" secondAttribute="bottom" constant="40" id="npM-Kf-14e"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CLFloor Detector" id="cra-N8-TIN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="6ev-eG-SiH"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="explainerLabel" destination="MiQ-Fr-6Xm" id="wna-mJ-7tf"/>
+                        <outlet property="resultLabel" destination="x06-2g-PtE" id="7o5-z1-j6a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="605" y="980"/>
+        </scene>
+    </scenes>
+</document>
